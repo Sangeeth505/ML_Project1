@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      section {
+        height: 130vh;
+        
+         background-image: url("im1.jpg");
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 8vh;
+        color: rgb(255, 255, 255);
+      }
+      section h1 {
+        text-align: center;
+        font-size: 3.5rem;
+        margin: 0 0 4vh 0;
+        color: rgb(222, 226, 230);
+        filter: drop-shadow(2px 2px 40px black);
+      }
+      .parent {
+        width: 75vw;
+        
+        margin: 83px auto;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.777);
+        
+        align-items: center;
+        border-radius: 10px;
+      }
+      
+      h4{
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 3.1px;
+      }
+
+      .box {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center ;
+        
+      }
+      input{
+        width: 15vw;
+        height: 5vh;
+        border-radius: 5px;
+        border: none;
+      }
+      select{
+        width: 15.5vw;
+        height:6vh ;
+        border-radius: 5px;
+        border: none;
+      }
+      .submit{
+ display: flex;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center ;
+        width: 6vw;
+        font-weight: 600;
+        border-radius: 15px;
+        margin-bottom: 18px;
+        padding: 5px;
+        filter: drop-shadow(1px 1px 10px );
+        transition: 500ms;
+      }
+      .submit:hover{
+        cursor: pointer;
+        background-color: #25b8ec;
+        transform: scale(1.1);
+
+
+      }
+      .result{
+        height: 14vh;
+        width: 18vw;
+            margin: 0 auto 0 45vw;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1 style="color:darkmagenta;">Prediction of top choicest IT institution</h1>
+      <div class="parent">
+        <form action="result" onsubmit="result()" method="GET">
+          <div class="box" style="margin-left: 22px;">
+            <h4>Course_title:&nbsp</h4>
+            <input type="text" name="Course_title" required/>
+            <h4>online_rating:&nbsp</h4>
+            <input type="text" name="online_rating" required/>
+          </div>
+          <!-- -->
+          <div class="box">
+            <h4>Syllabus_range:&nbsp</h4>
+            <select style="margin-right: 10px;" name="Syllabus_range" id="" >
+              <option value="" selected="selected"></option>
+              <option value="3">Mixed</option>
+              <option value="2">Intermediate</option>
+              <option value="1">Beginner</option>
+            </select>
+            <h4>Course_fee:&nbsp</h4>
+            <input type="text" name="Course_fee" required/>
+            
+          </div>
+          <!--  -->
+          <div class="box">
+            <h4>Course_duration:&nbsp</h4>
+            <input type="text" name="Course_duration" required/>
+            <h4>Certifications:&nbsp</h4>
+            <input type="text" name="Certifications" required/>
+            
+          </div>
+          <div class="box" style="margin-left: 25px;">
+            <input class="submit" type="submit" value="Predict" />
+          </div>
+          <div class="result">
+            <h2 style="margin-left: -129px;">{{result}}</h2>
+          </div>
+          
+          <!--  -->
+        </div>
+        <!--  -->
+        
+         
+        </form>
+      </div>
+      
+    </section>
+  </body>
+</html>
